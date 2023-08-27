@@ -1,0 +1,67 @@
+---
+import avatar from "../../public/images/depzai.png";
+import SocialItem from "./SocialItem.astro";
+
+const socialList = [
+  {
+    url: "../../../public/icons/facebook.svg",
+    title: "facebook",
+    link: "https://www.facebook.com/banhuy1811/",
+  },
+  {
+    url: "../../../public/icons/Twitter.svg",
+    title: "twitter",
+    link: "https://www.facebook.com/banhuy1811/",
+  },
+  {
+    url: "../../../public/icons/Instagram.svg",
+    title: "instagram",
+    link: "https://www.facebook.com/banhuy1811/",
+  },
+  {
+    url: "../../../public/icons/Linkedin.svg",
+    title: "linkedin",
+    link: "https://www.facebook.com/banhuy1811/",
+  },
+  {
+    url: "../../../public/icons/Google.svg",
+    title: "google",
+    link: "https://www.facebook.com/banhuy1811/",
+  },
+];
+---
+
+<div class="w-fit h-fit border-2 border-slate-500 p-10 rounded-lg">
+  <div class="flex flex-col">
+    <div class="flex flex-row items-baseline mb-2">
+      <div class="text-6xl text-blue-400">T</div>
+      <div class="text-4xl">ihii</div>
+    </div>
+    <img
+      src={avatar}
+      alt="avatar"
+      width="300"
+      height="300"
+      class="rounded-lg"
+    />
+    <div class="text-center text-xl">From Viet Nam with love ❤❤❤</div>
+    <div class="text-center text-md text-slate-400">
+      Want to be a developer but still at home
+    </div>
+
+    <div class="flex flex-row justify-between my-3">
+      {
+        socialList.map((item) => (
+          <SocialItem
+            imageUrl={item.url}
+            title={item.title}
+            socialLink={item.link}
+          />
+        ))
+      }
+    </div>
+    <div class="text-center bg-blue-500 px-10 py-6 rounded-lg text-2xl">
+      HIRE ME!
+    </div>
+  </div>
+</div>
